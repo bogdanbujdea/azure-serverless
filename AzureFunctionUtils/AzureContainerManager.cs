@@ -49,6 +49,10 @@ namespace AzureFunctionUtils
                     return ContainerStatus.Missing;
                 }
 
+                if (containerGroup.State == "Failed")
+                {
+                    return ContainerStatus.Running;
+                }
                 if (containerGroup.State != "Running")
                 {
                     return ContainerStatus.Initializing;
@@ -164,6 +168,8 @@ namespace AzureFunctionUtils
         {
             var azureContainerManager = new AzureContainerManager(contextFunctionAppDirectory);
             var containerStatus = azureContainerManager.GetStatus();
+            Logger.Info($"Status is {containerStatus}");
+
             if (containerStatus == ContainerStatus.Running)
             {
                 azureContainerManager.StopImageAnalyzer();
