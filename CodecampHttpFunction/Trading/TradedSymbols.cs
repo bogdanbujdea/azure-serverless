@@ -13,7 +13,7 @@ namespace CodecampHttpFunction.Trading
             return new List<MarketInfo>
             {
                 new MarketInfo("XBTUSD", "https://www.tradingview.com/chart/WiAaybp9/",
-                    quantity: 800,
+                    quantity: 2000,
                     leverage: 50,
                     decimalCount: 0,
                     stopLossPercentage: 1M,

@@ -14,7 +14,7 @@ namespace CodecampHttpFunction.Trading
 {
     public class SignalManager
     {
-        public async Task<HttpResponseMessage> ProcessImages( string timestamp)
+        public async Task<HttpResponseMessage> ProcessImages(string timestamp)
         {
             CryptoTrader.Timestamp = long.Parse(timestamp);
             var linksForImages = GetLinksForImages();
