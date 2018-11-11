@@ -1,0 +1,14 @@
+config:
+  target: 'https://bogdanhttp.azurewebsites.net/api'
+  plugins:
+    expect: {}
+  phases:
+    - duration: 30
+      arrivalRate: 500
+      name: "http function load testing"
+scenarios:
+  - flow:
+    - get:
+        url: "/HttpTest?code=pyYX/7Qz7CRVIS9F9FL/PSaLljRUHkEcHAGEYKQmTEpLnKCEmuNAFg=="
+        expect:
+            - statusCode: 200
