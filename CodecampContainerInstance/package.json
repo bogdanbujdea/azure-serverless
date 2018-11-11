@@ -1,0 +1,9 @@
+{
+  "name": "crybot.imageanalyzer",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^1.8.0",
+    "azure-storage": "^2.10.1"
+  }
+}
