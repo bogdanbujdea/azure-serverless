@@ -5,7 +5,7 @@ namespace CodecampHttpFunction.Trading
     public class MarketInfo
     {
         public MarketInfo(string market, string chartUrl, int quantity, int leverage, int decimalCount,
-            decimal stopLossPercentage, decimal takeProfitPercentage, decimal triggerDistance, List<OrderInfo> orders)
+            decimal stopLossPercentage, decimal takeProfitPercentage, decimal triggerDistance)
         {
             Market = market;
             ChartUrl = chartUrl;
@@ -15,10 +15,8 @@ namespace CodecampHttpFunction.Trading
             StopLossPercentage = stopLossPercentage;
             TakeProfitPercentage = takeProfitPercentage;
             TriggerDistanceUnits = triggerDistance;
-            Orders = orders;
         }
 
-        public List<OrderInfo> Orders { get; set; }
 
         public int DecimalCount { get; set; }
 
